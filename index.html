@@ -13,7 +13,7 @@
           <div class="display">
             <input type="text" name="display" id="display" />
           </div>
-          <div>
+          <div class="first-row">
             <input type="button" value="AC" onclick="display.value=''" />
             <input
               type="button"
@@ -27,24 +27,29 @@
             <input type="button" class="calc-btn" value="7" />
             <input type="button" class="calc-btn" value="8" />
             <input type="button" class="calc-btn" value="9" />
-            <input type="button" class="calc-btn" value="*" />
+            <input type="button" class="calc-btn imp" value="*" />
           </div>
           <div>
             <input type="button" class="calc-btn" value="4" />
             <input type="button" class="calc-btn" value="5" />
             <input type="button" class="calc-btn" value="6" />
-            <input type="button" class="calc-btn" value="-" />
+            <input type="button" class="calc-btn imp" value="-" />
           </div>
           <div>
             <input type="button" class="calc-btn" value="1" />
             <input type="button" class="calc-btn" value="2" />
             <input type="button" class="calc-btn" value="3" />
-            <input type="button" class="calc-btn" value="+" />
+            <input type="button" class="calc-btn imp" value="+" />
           </div>
           <div>
             <input type="button" class="calc-btn" value="00" />
             <input type="button" class="calc-btn" value="0" />
-            <input type="button" class="eq" value="=" />
+            <input
+              type="button"
+              class="eq"
+              value="="
+              onclick="display.value = Number(eval(display.value)).toFixed(eval(display.value) % 1 ? 4 : 0)"
+            />
           </div>
         </form>
       </div>
